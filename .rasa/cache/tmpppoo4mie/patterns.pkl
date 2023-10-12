@@ -1,0 +1,6 @@
+[
+  {
+    "name": "username",
+    "pattern": "(\\bLeo\\b|\\bJudy\\b|\\bLuffy\\b|\\bNacy\\b|\\bTom\\b|\\bJerry\\b)"
+  }
+]

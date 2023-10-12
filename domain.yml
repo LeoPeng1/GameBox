@@ -1,0 +1,502 @@
+version: '3.1'
+intents:
+- affirm
+- answer
+- ask_
+- ask_account
+- ask_download
+- ask_email_service
+- ask_gameboxpro
+- ask_gameboxx
+- ask_gri
+- ask_human
+- ask_info
+- ask_login
+- ask_monthly
+- ask_other
+- ask_performance
+- ask_personal_sub
+- ask_phone_service
+- ask_sub
+- ask_supportedgames
+- ask_trial
+- ask_yearly
+- bad_language
+- bot_challenge
+- call_time
+- check_subscription
+- deny
+- email_address
+- entertainment
+- feedback
+- goodbye
+- greet
+- help
+- mood_great
+- mood_unhappy
+- nlu_fallback
+- password
+- phone_number
+- reset_password
+- unsupported_queries
+- user_name
+responses:
+  utter_greet:
+  - text: Hello, welcome to GameBox Support!😃 How may I assist you today?
+    buttons:
+    - title: Information on Products and Subscription Services
+      payload: /ask_info
+    - title: Customer Grievances
+      payload: /ask_gri
+  utter_other:
+  - text: You can choose the direction you are interested in 😊
+    buttons:
+    - title: Information on Products and Subscription Services
+      payload: /ask_info
+    - title: Customer Grievances
+      payload: /ask_gri
+  utter_grievances:
+  - text: Grievances list
+    buttons:
+    - title: Downloading Issues Troubleshooting steps
+      payload: /utter_download
+    - title: Performance Troubleshooting steps
+      payload: /ask_performance
+    - title: Account Issues
+      payload: /ask_account
+    - title: Human services
+      payload: /ask_human
+  utter_info_list:
+  - text: Information List
+    buttons:
+    - title: GameBox X
+      payload: /ask_gameboxx
+    - title: GameBox Pro
+      payload: /ask_gameboxpro
+    - title: Supported Games
+      payload: /ask_supportedgames
+    - title: Subscription Services
+      payload: /ask_sub
+    - title: Human services
+      payload: /ask_human
+  utter_gameboxx:
+  - text: |-
+      GameBox X:
+       Performance Level: GameBox X is an excellent gaming console suitable for a wide range of gamers. It offers outstanding performance and a smooth gaming experience, making it ideal for various game genres.
+       Game Library: GameBox X comes with a vast and diverse game library, including various types of games, from action-adventure to racing and role-playing games. You can enjoy a wide variety of exciting games.
+       HD Graphics: This gaming console supports high-definition graphics, allowing you to experience realistic game visuals and stunning visual effects.
+       Multiplayer Gaming: GameBox X supports multiplayer gaming, enabling you to play games with friends or other players from online communities, adding to the fun of multiplayer gaming.
+       Convenience: GameBox X is designed with user convenience in mind. It has an intuitive user interface, easy setup, and compatibility with a wide range of accessories.
+       Do you want to know some other information?❤️ 
+    buttons:
+    - title: Yes
+      payload: /ask_other
+    - title: No
+      payload: /deny
+  utter_gameboxpro:
+  - text: |-
+      GameBox Pro:
+       Performance Powerhouse: GameBox Pro is a high-performance gaming console designed for gamers who demand top-tier performance. It delivers exceptional processing power and graphics performance, setting a new standard for gaming consoles.
+       Enhanced Game Library: GameBox Pro offers an expanded and enhanced game library, featuring the latest titles optimized for high-end performance. Gamers can enjoy cutting-edge graphics and immersive gameplay experiences.
+       4K Ultra HD: This gaming console supports 4K Ultra HD resolution, providing players with breathtakingly sharp and detailed visuals. Games come to life with incredible clarity and realism.
+       Advanced Multiplayer: GameBox Pro takes multiplayer gaming to the next level with advanced online features, allowing gamers to connect with friends and competitors worldwide for intense multiplayer battles.
+       Premium Build: The GameBox Pro boasts a premium build quality with sleek design elements and enhanced cooling technology to ensure extended gaming sessions without overheating.
+       Do you want to know some other information?❤️
+    buttons:
+    - title: Yes
+      payload: /ask_other
+    - title: No
+      payload: /deny
+  utter_supportedgames:
+  - text: |-
+      GameBox X supports the following games:
+       Game Name: Sword of the Necromancer Game Type: Roguelike Developer: Grimorio of Games  Publisher: JanduSoft Release date: To be determined 🎮
+       Game Name: The Binding of Isaac: Repentance Game Type: Roguelike Developer: Nicalis Publisher: Nicalis Release date: 2021/11/4🎮
+       Game Name: The Last Stand: Aftermath Game Type: Roguelike Developer: Con Artist Games Publisher: Armor Games Studios  Release date: 2021/11/6 🎮
+       Game Name: Sniper Ghost Warrior Contract 2 Game Type: tactical shooting Developer:  CI Games Publisher: CI Games Release date: 2021/8/24 🎮
+       Game Name: Rainbow Six: Evacuate the Zone Game Type: tactical Developer: Ubisoft Montreal Publisher: Ubisoft Release date: 2022/1/20🎮
+       Game Name: Ghost Recon: Frontline Game Type: tactical Developer: Ubisoft Paris  Publisher:   Ubisoft Release date: To be determined 🎮
+       Game Name: FIFA22 Game Type: physical education Developer:  Electronic Arts Vancouver Publisher: Electronic Arts Release date: 2020/12/4🎮
+       Game Name: Madden NFL 23 Game Type: physical education Developer: Electronic Arts Publisher: Electronic Arts Release date: 2021/8/20🎮
+       Game Name: NBA 2K22 Game Type: physical education Developer: Visual Concepts Publisher:  2K Sports Release date: 2020/11/12🎮
+       Game Name: Kerbal Space Program: Enhanced Edition Game Type: space flight simulation Developer: Squad Publisher: Private Division Release date: 2021/9/24🎮
+       Do you want to know some other information?❤️ 
+    buttons:
+    - title: Yes
+      payload: /ask_other
+    - title: No
+      payload: /deny
+  utter_sub:
+  - text: 'GameBox X offers the following subscription services:'
+    buttons:
+    - title: Two-weeks trial
+      payload: /ask_trial
+    - title: Monthly subscription
+      payload: /ask_monthly
+    - title: Yearly subscription
+      payload: /ask_yearly
+  utter_trial:
+  - text: |-
+      Two-weeks trial subscription:
+       1.Two weeks of free games: Two-week members will receive free games for the duration of their subscription. The games will be available for two weeks, during which time members can download and play them for free with no additional purchases.
+       2.Limited-time discounts: Members can enjoy limited-time discounts in the game store and purchase games, virtual items, and DLC at cheaper prices, but the discounts may be lower than those for monthly members.
+       3.Short-Term Exclusive Items: Two-week members will receive some short-term exclusive in-game items, cosmetics, or gear, but these items may no longer be available after the subscription ends.
+       4.Fast Game Streaming: Members can enjoy Fast Game Streaming for smooth streaming of game content, but may not be as high quality as HD streaming.
+       Of course, you can easily upgrade to a monthly membership! Please follow these steps:
+       1.Log in to your GameBox account. If you don't have an account yet, you can register on our website.
+       2.Once logged in, visit your Account Settings or Subscription Management page.
+       3.On this page, you will see an option to upgrade to a monthly membership. Please click on it.
+       4.You will be guided through the payment process. Please provide the required payment information to ensure your upgrade is completed successfully.
+       5.Once your upgrade payment is successful, you will immediately become a monthly member and enjoy more discounts and benefits.
+       Please note that the cost of upgrades is often reduced to encourage users to choose a longer subscription period. If you need more help or have any questions, please feel free to contact our customer support team.
+       Do you want to know some other information?❤️ 
+    buttons:
+    - title: Yes
+      payload: /ask_other
+    - title: No
+      payload: /deny
+  utter_monthly:
+  - text: |-
+      Monthly subscription:
+       1.Monthly Free Games: GameBox monthly members will receive free games every month. These games will be available for free download and play during the subscription period, with no additional purchase required.
+       2.Exclusive Game Content: Members will have access to exclusive or early access game content, expansions, or DLC on the GameBox platform. This means they can experience new game content before non-subscribers.
+       3.Game Discounts: Monthly members can enjoy discounts and promotions in the GameBox game store. They can purchase games, virtual items, and DLC at lower prices.
+       4.Online Multiplayer Gaming: Members will have unlimited access to online multiplayer gaming. They can play multiplayer games with other subscribers or players from the online community.
+       5.Cloud Storage: GameBox monthly members can use cloud storage space to save and synchronize game progress and save files across different devices, ensuring the security and accessibility of game data.
+       6.Exclusive In-Game Items: Members will receive exclusive in-game items such as character skins, equipment, skins, or other virtual items to stand out in the game.
+       7.Early Access and Demos: Members can access early demos and previews of upcoming games. This allows them to experience the exciting content of games before their official release.
+       8.Exclusive Events and Tournaments: GameBox monthly members will have the opportunity to participate in exclusive game events, competitions, and tournaments, with a chance to win prizes and honors.
+       Do you want to know some other information?❤️ 
+    buttons:
+    - title: Yes
+      payload: /ask_other
+    - title: No
+      payload: /deny
+  utter_yearly:
+  - text: |-
+      Yearly subscription:
+       1.Monthly Free Games: GameBox annually members will receive free games every month. These games will be available for free download and play during the subscription period, with no additional purchase required.
+       2.Exclusive Game Content: Members will have access to exclusive or early access game content, expansions, or DLC on the GameBox platform. This means they can experience new game content before non-subscribers.
+       3.Game Discounts: Annually members can enjoy discounts and promotions in the GameBox game store. They can purchase games, virtual items, and DLC at lower prices.
+       4.Online Multiplayer Gaming: Members will have unlimited access to online multiplayer gaming. They can play multiplayer games with other subscribers or players from the online community.
+       5.Cloud Storage: GameBox annually members can use cloud storage space to save and synchronize game progress and save files across different devices, ensuring the security and accessibility of game data.
+       6.Exclusive In-Game Items: Members will receive exclusive in-game items such as character skins, equipment, skins, or other virtual items to stand out in the game.
+       7.Early Access and Demos: Members can access early demos and previews of upcoming games. This allows them to experience the exciting content of games before their official release.
+       8.Exclusive Events and Tournaments: GameBox annually members will have the opportunity to participate in exclusive game events, competitions, and tournaments, with a chance to win prizes and honors.
+       9.VIP Access: Annual members will receive VIP access, giving them higher priority in the game. This can include early access, VIP server access, queuing priority, etc.
+       10.Exclusive and limited items: Members will regularly receive exclusive and limited game items, appearances, equipment or other virtual items. These items will be unique within the game.
+       11.Game Previews and Closed Tests: Annual members have early access to game previews, closed tests, and trial versions to learn about the game’s content and mechanics in advance.
+       12.HD Game Streaming: Members can enjoy HD game streaming service, allowing them to stream games smoothly without downloading them.
+       13.Exclusive communities and forums: Annual members have access to exclusive communities and forums to exchange gaming experiences, suggestions and opinions with other members.
+       14.Annual Rewards and Achievements: GameBox can set annual achievements and rewards to reward annual members for their long-term support of the platform, such as special game achievements, virtual trophies or bonus in-game currency.
+       15.Regular gifts: Annual members will receive special gifts from time to time, such as game peripherals, T-shirts, posters or limited edition items.
+       16.Game Developer Meeting: GameBox can organize member-exclusive game developer meeting, giving members the opportunity to communicate with game developers and provide feedback.
+       Do you want to know some other information?❤️ 
+    buttons:
+    - title: Yes
+      payload: /ask_other
+    - title: No
+      payload: /deny
+  utter_human:
+  - text: |-
+      If you need to talk to a human, please call 555-555-5555☎️. Our customer service representatives are available 24/7 to assist you with any questions or concerns you may have. Thank you for choosing GameBox!
+       Do you want to know some other information?❤️ 
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_feedback:
+  - text: Do you want to give us some feedback to help us improve.
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_thanks_yes:
+  - text: |-
+      Thank you for your feedback! We will continue to improve our services to provide you with better service.
+      Bye, hope to see you again soon.👋
+  utter_thanks_no:
+  - text: |-
+      It's okay. Thank you for your time.
+      Bye, hope to see you again soon.👋
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_download:
+  - text: |-
+      We're sorry you're having download problems. Let's solve this problem together. Please follow these steps:
+       1.Check network connection:
+       Make sure your device is connected to a stable internet network. Try opening a web page or other online service to confirm that your connection is working.
+       2.Clear download queue:
+       If there are multiple downloads in progress, try clearing the download queue and restarting the download. Sometimes an item in the download queue may prevent other items from completing.
+       3.Check storage space:
+       Please check that you have enough storage space on your device to save the download. Insufficient storage space may cause the download to fail.
+       4.Reboot the device:
+       Try restarting your device and try downloading again. Sometimes the device needs to be restarted to resolve download issues.
+       5.Update application:
+       Please make sure the application you are using is the latest version. Sometimes updating the app can resolve download-related issues.
+       6.Check download settings:
+       Check the download settings in the application to make sure the download directory and options are set correctly.
+       7.Check download source:
+       Please make sure the content you are downloading is from a trustworthy source. Downloading content from official channels or app stores is generally safer and more reliable.
+       8.Disable firewall or security software:
+       If you have a firewall or security software on your device, they may block some downloads. Try disabling them and re-downloading.
+       9.Contact GameBox Customer Support:
+       If none of the above steps resolve the issue, please contact our customer support. Our professional team will try our best to help you solve your download problems.
+       Do you need any other help or get some other information？❤️ 
+    buttons:
+    - title: Yes
+      payload: /ask_other
+    - title: No
+      payload: /deny
+  utter_performance:
+  - text: |-
+      If you are having issues with the performance of your GameBox device, we can work together to resolve it. Please follow these steps to improve performance:
+       1. Close unnecessary background applications:
+       Close unnecessary applications that are running in the background. This frees up system resources and improves performance.
+       2. Check storage space:
+       Make sure your device has enough storage space. Insufficient storage space may cause performance degradation. Clean up unnecessary files and applications.
+       3. Lower the game settings:
+       If you are experiencing performance issues in a game, try lowering the game's graphics settings and resolution. This can reduce the load on the system.
+       4. Check the temperature:
+       A gaming console that overheats can cause performance issues. Make sure there is good ventilation around the device and clean the radiator if needed.
+       5. Turn off special effects and animations:
+       In system settings, you can disable some special effects and animations to improve performance.
+       6. Update driver:
+       If you use an external device (such as a controller), make sure its driver is the latest version.
+       7. Check Internet connection:
+       If the game requires an online connection, make sure your internet connection is stable. High latency or unstable connections can cause performance issues.
+       8. Clean up memory:
+       Sometimes clearing your device's memory can improve performance. Look for memory cleaning options in your device settings.
+       9.Update operating system and applications:
+       Make sure your operating system and gaming applications are up to date. Updates can fix performance issues and bugs.
+       10. Contact GameBox Customer Support:
+       If none of the above steps resolve the performance issue, please contact our customer support. Our professional team will try our best to help you resolve your performance issues.
+       Please try these steps based on your specific situation to improve the performance of your GameBox device. If the problem persists, please feel free to contact GameBox Customer Support for personalized assistance. We are committed to ensuring you enjoy the best gaming experience.
+       Do you need any other help or get some other information？❤️ 
+    buttons:
+    - title: Yes
+      payload: /ask_other
+    - title: No
+      payload: /deny
+  utter_account_issue:
+  - text: |-
+      If you are having issues with your GameBox account, we can work together to resolve it. Please follow these steps to improve performance:
+       1. Check network connection:
+       Make sure your device is connected to a stable internet network. Try opening a web page or other online service to confirm that your connection is working.
+       2. Check login information:
+       Make sure you are using the correct login information. If you have forgotten your password, you can reset it on our website.
+       3. Check account status:
+       Make sure your account is not suspended or banned. If your account is suspended or banned, please contact our customer support for assistance.
+       4. Check payment status:
+       If you have a subscription, please make sure your payment is up to date. If your payment is overdue, please make the payment as soon as possible to avoid service interruption.
+       5. Contact GameBox Customer Support:
+       If none of the above steps resolve the issue, please contact our customer support. Our professional team will try our best to help you solve your account issues.
+       Do you need any other help or get some other information？❤️ 
+    buttons:
+    - title: Reset password
+      payload: /reset_password
+    - title: Your own subscription
+      payload: /check_subscription
+    - title: Contact customer support
+      payload: /ask_human
+    - title: other information
+      payload: /ask_other
+  utter_unsupported_queries:
+  - text: Sorry, I couldn't understand you. Could you rephrase your question?
+  utter_alternatives:
+  - text: Your request can't be fulfilled right now. Would you like try to connect to a human agent?
+    buttons:
+    - title: Talk to a supervisor
+      payload: /ask_human
+    - title: We call you
+      payload: /ask_phone_service
+    - title: Email us
+      payload: /ask_email_service
+  utter_ask_phone:
+  - text: Please enter your phone number(should start with 86)📞
+  utter_ask_time_to_call:
+  - text: Please enter the time you want to call(shoud be in the format of 2023-11-11 11am)📅
+  utter_confirm_time:
+  - text: |-
+      We will call you {phone_number} at {call_time}
+      Do you any other help or get some other information?❤️ 
+    buttons:
+    - title: Yes
+      payload: /ask_other
+    - title: No
+      payload: /deny
+  utter_ask_email:
+  - text: Please enter your email address📧
+  utter_confirm_email:
+  - text: |-
+      We will send you an email at {email_address}
+      Do you any other help or get some other information?❤️ 
+    buttons:
+    - title: Yes
+      payload: /ask_other
+    - title: No
+      payload: /deny
+  utter_want_other_help:
+  - text: Do you want any other help or get some other information?❤️
+    buttons:
+    - title: Yes
+      payload: /ask_other
+    - title: No
+      payload: /deny
+  utter_joke:
+  - text: |-
+      Ghost: God, next time I reincarnate, I want to be as white as an angel and carry a pair of wings, but I still want to suck blood.
+      God: Then you reincarnate and become a protector.
+      Enjoy the laugh! If you have any more questions or need assistance, feel free to ask.❤️
+    buttons:
+    - title: Yes
+      payload: /ask_other
+    - title: No
+      payload: /deny
+  - text: |-
+      A friend was selling popsicles in the park for the first time during a work-study program, and was embarrassed to shout; At this moment, suddenly someone was shouting, 'Sell popsicles~~Sell popsicles~~'.\n
+      Upon hearing this, the friend was very happy and shouted, "Me too, me too."
+      Enjoy the laugh! If you have any more questions or need assistance, feel free to ask.❤️
+    buttons:
+    - title: Yes
+      payload: /ask_other
+    - title: No
+      payload: /deny
+  - text: |-
+      The ant and the elephant died shortly after they got married. The ant buried the elephant while crying bitterly, "Dear, why did you go so early? I won't do anything else in my life, just bury you"
+      Enjoy the laugh! If you have any more questions or need assistance, feel free to ask.❤️
+    buttons:
+    - title: Yes
+      payload: /ask_other
+    - title: No
+      payload: /deny
+  - text: |-
+      A person saw a pile of things on the road, squatted down to smell it, said it might be feces, touched it with their hand, licked it in their mouth, and said, 'It's really feces, fortunately I didn't step on it!'~ 
+      Enjoy the laugh! If you have any more questions or need assistance, feel free to ask.❤️
+    buttons:
+    - title: Yes
+      payload: /ask_other
+    - title: No
+      payload: /deny
+  - text: |-
+      The doctor asked the patient how the fracture occurred. Answer: I feel sand in my shoes, so I held onto the electric pole and shook my shoes. I shook and shook Someone thought I was electrocuted and picked up a wooden stick and gave me two sticks.
+      Enjoy the laugh! If you have any more questions or need assistance, feel free to ask. ❤️
+    buttons:
+    - title: Yes
+      payload: /ask_other
+    - title: No
+      payload: /deny
+  utter_happy:
+  - text: Great, carry on!
+  utter_ask_new_password:
+  - text: Please enter your new password
+  utter_goodbye:
+  - text: Bye, hope to see you again soon.
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_ask_username:
+  - text: Hello! What is your user name?
+  utter_ask_password:
+  - text: Please enter your password
+  utter_persuade:
+  - text: We value courtesy and respect, and we want to maintain a positive and friendly environment for dialogue🙏. Please be careful not to use inappropriate or offensive language. If you have any questions or need help, please feel free to ask and we will be happy to assist you.
+  utter_end:
+  - text: Sorry, we adhere to the principles of courtesy and respect. We had to end the chat due to inappropriate remarks.❗ If you have any other appropriate questions or need assistance, please feel free to contact us. We hope you will remain polite and friendly. Thanks!🙏
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+actions:
+- utter_grievances
+- action_check_subscription_information
+- utter_want_other_help
+- utter_account_issue
+- utter_greet
+- utter_ask_username
+- action_reset_password
+- utter_feedback
+- action_display_question
+- utter_ask_new_password
+- utter_thanks_yes
+- utter_performance
+- utter_human
+- utter_thanks_no
+- utter_info_list
+- utter_other
+- utter_download
+- utter_joke
+- utter_unsupported_queries
+- utter_alternatives
+- utter_confirm_email
+- utter_ask_email
+- utter_confirm_time
+- utter_ask_phone
+- utter_ask_time_to_call
+- utter_persuade
+- utter_end
+- utter_ask_password
+- utter_sub
+- utter_yearly
+- utter_trial
+- utter_monthly
+- utter_gameboxpro
+- utter_supportedgames
+- utter_gameboxx
+- utter_goodbye
+- utter_entertainment
+entities:
+- username
+- password
+- answer
+- email_address
+- phone_number
+- call_time
+slots:
+  username:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: username
+  password:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: password
+  answer:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: answer
+  phone_number:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: phone_number
+  call_time:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: call_time
+  email_address:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: email_address
+forms:
+  check_subscription_form:
+    required_slots:
+    - username
+    - password
+  reset_password_form:
+    required_slots:
+    - username
+    - answer
+    - password

@@ -1,0 +1,67 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_yearly\"}}]": "utter_yearly",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_yearly\"}}, {\"prev_action\": {\"action_name\": \"utter_yearly\"}, \"user\": {\"intent\": \"ask_yearly\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"check_subscription\"}}]": "check_subscription_form",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"check_subscription\"}}, {\"active_loop\": {\"name\": \"check_subscription_form\"}, \"prev_action\": {\"action_name\": \"check_subscription_form\"}, \"user\": {\"intent\": \"check_subscription\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"reset_password\"}}]": "utter_ask_username",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"reset_password\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_username\"}, \"user\": {\"intent\": \"reset_password\"}}]": "action_listen",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"check_subscription_form\"}}]": "action_check_subscription_information",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"check_subscription_form\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"action_check_subscription_information\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_gameboxx\"}}]": "utter_gameboxx",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_gameboxx\"}}, {\"prev_action\": {\"action_name\": \"utter_gameboxx\"}, \"user\": {\"intent\": \"ask_gameboxx\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_human\"}}]": "utter_human",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_human\"}}, {\"prev_action\": {\"action_name\": \"utter_human\"}, \"user\": {\"intent\": \"ask_human\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_supportedgames\"}}]": "utter_supportedgames",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_supportedgames\"}}, {\"prev_action\": {\"action_name\": \"utter_supportedgames\"}, \"user\": {\"intent\": \"ask_supportedgames\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]": "utter_goodbye",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_trial\"}}]": "utter_trial",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_trial\"}}, {\"prev_action\": {\"action_name\": \"utter_trial\"}, \"user\": {\"intent\": \"ask_trial\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_gameboxpro\"}}]": "utter_gameboxpro",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_gameboxpro\"}}, {\"prev_action\": {\"action_name\": \"utter_gameboxpro\"}, \"user\": {\"intent\": \"ask_gameboxpro\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"entertainment\"}}]": "utter_entertainment",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"entertainment\"}}, {\"prev_action\": {\"action_name\": \"utter_entertainment\"}, \"user\": {\"intent\": \"entertainment\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "utter_iamabot",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_sub\"}}]": "utter_sub",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_sub\"}}, {\"prev_action\": {\"action_name\": \"utter_sub\"}, \"user\": {\"intent\": \"ask_sub\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_download\"}}]": "utter_download",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_download\"}}, {\"prev_action\": {\"action_name\": \"utter_download\"}, \"user\": {\"intent\": \"ask_download\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_account\"}}]": "utter_account_issue",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_account\"}}, {\"prev_action\": {\"action_name\": \"utter_account_issue\"}, \"user\": {\"intent\": \"ask_account\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_other\"}}]": "utter_other",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_other\"}}, {\"prev_action\": {\"action_name\": \"utter_other\"}, \"user\": {\"intent\": \"ask_other\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_monthly\"}}]": "utter_monthly",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_monthly\"}}, {\"prev_action\": {\"action_name\": \"utter_monthly\"}, \"user\": {\"intent\": \"ask_monthly\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_performance\"}}]": "utter_performance",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_performance\"}}, {\"prev_action\": {\"action_name\": \"utter_performance\"}, \"user\": {\"intent\": \"ask_performance\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_gri\"}}]": "utter_grievances",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_gri\"}}, {\"prev_action\": {\"action_name\": \"utter_grievances\"}, \"user\": {\"intent\": \"ask_gri\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [
+      "check_subscription_form"
+    ],
+    "rules_for_loop_unhappy_path": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"check_subscription_form\"}, \"prev_action\": {\"action_name\": \"check_subscription_form\"}, \"user\": {\"intent\": \"check_subscription\"}}]": "do_not_predict_loop_action"
+    },
+    "rules_not_in_stories": [
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"check_subscription_form\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"action_check_subscription_information\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "predicting default action with intent restart",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]",
+      "predicting default action with intent back",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"entertainment\"}}, {\"prev_action\": {\"action_name\": \"utter_entertainment\"}, \"user\": {\"intent\": \"entertainment\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"entertainment\"}}]",
+      "predicting default action with intent session_start",
+      "handling active loops and forms - check_subscription_form",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"check_subscription\"}}]",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"check_subscription_form\"}}]",
+      "handling active loops and forms - check_subscription_form - action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]"
+    ]
+  }
+}
