@@ -1,0 +1,125 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Say the information about gameboxx
+  steps:
+  - intent: ask_gameboxx
+  - action: utter_gameboxx
+- rule: Say the information about gameboxpro
+  steps:
+  - intent: ask_gameboxpro
+  - action: utter_gameboxpro
+- rule: Say the information about supported games
+  steps:
+  - intent: ask_supportedgames
+  - action: utter_supportedgames
+- rule: Say the information about subscription services
+  steps:
+  - intent: ask_sub
+  - action: utter_sub
+- rule: Say the information about human services
+  steps:
+  - intent: ask_human
+  - action: utter_human
+- rule:  say the information about two-weeks trial subscription
+  steps:
+  - intent: ask_trial
+  - action: utter_trial
+- rule: Say the information about monthly subscription
+  steps:
+  - intent: ask_monthly
+  - action: utter_monthly
+- rule: Say the information about yearly subscription
+  steps:
+  - intent: ask_yearly
+  - action: utter_yearly
+- rule: Say the information about download information
+  steps:
+  - intent: ask_download
+  - action: utter_download
+- rule: Say the information about performance information
+  steps:
+  - intent: ask_performance
+  - action: utter_performance
+- rule: other information
+  steps:
+  - intent: ask_other
+  - action: utter_other
+# - rule: Tell the secure problem
+#   steps:
+#   - intent: user_name
+#   - action: action_tell_secure_problem
+- rule: account problem
+  steps:
+  - intent: ask_account
+  - action: utter_account_issue
+
+- rule: grievance
+  steps:
+  - intent: ask_gri
+  - action: utter_grievances
+
+  
+# - rule: Action reset password Form
+#   steps:
+#   - intent: reset_password
+#   - action: reset_password_form
+#   - active_loop: reset_password_form
+
+# - rule: Submit reset password Form
+#   condition:
+#   - active_loop: reset_password_form
+#   steps:
+#   - action: reset_password_form
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   - action: utter_change_password_success
+
+
+- rule: Activate check subscription Form
+  steps:
+  - intent: check_subscription
+  - action: check_subscription_form
+  - active_loop: check_subscription_form
+
+- rule: Submit check subscription Form
+  condition:
+  - active_loop: check_subscription_form
+  steps:
+  - action: check_subscription_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_check_subscription_information
+
+# - rule: Activate Reset password Form
+#   steps:
+#   - intent: reset_password
+#   - action: reset_password_form
+#   - active_loop: reset_password_form
+
+# - rule: Submit Reset password Form
+#   condition:
+#   - active_loop: reset_password_form
+#   steps:
+#   - action: reset_password_form
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   - action: action_reset_password
+- rule: help
+  steps:
+  - intent: help
+  - action: utter_greet
